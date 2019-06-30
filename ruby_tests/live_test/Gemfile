@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+gem 'rspec-core'
+gem 'rspec-expectations'
+gem 'rspec-mocks'
+gem 'capybara', '2.7.1'
+gem 'capybara-screenshot', '1.0.13'
+gem 'json_spec', '1.1.4'
+gem 'webmock', '~> 3.2.1'
+gem 'selenium-webdriver'
+gem 'webdrivers'
+gem 'capybara-chromedriver-logger'
