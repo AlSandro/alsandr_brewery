@@ -5,7 +5,7 @@ RSpec.feature 'Calls', type: :feature do
 
   scenario 'A user should be able to make a call', js: true do
     puts '====*********** SHOW APP > SANITY TEST STARTED ***********===='
-    visit 'https://worksense.daqri.com/show/#/'
+    visit '/show/#/'
     
     page.find('#sign-in-link').click
 

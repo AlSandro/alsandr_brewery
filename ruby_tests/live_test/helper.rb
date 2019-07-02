@@ -3,7 +3,7 @@ require 'selenium-webdriver'
 require 'capybara/rspec'
 require 'capybara-screenshot/rspec'
 
-ENV['REMOTE_HOST'] = 'https://worksense.daqri.com'
+ENV['REMOTE_HOST'] = 'https://worksense.development.daqri.info'
 
 if ENV['REMOTE_HOST'] != ''
   Capybara.app_host = ENV['REMOTE_HOST']
