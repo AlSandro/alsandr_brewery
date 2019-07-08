@@ -10,4 +10,4 @@ def romanToInt(s: str) -> int:
             roman_dict[s[i+1]] -= roman_dict[s[i]]
     return final + roman_dict[s[-1]] # something wrong here.... even though it works
 
-print (romanToInt('MCMXCIV'))
+print (romanToInt('MCMXCIX'))

@@ -2,7 +2,7 @@ version: '2'
 
 services:
   app_test:
-    image: live_test:local
+    image: python_tests:local
     build:
       context: .
       dockerfile: ./Dockerfile

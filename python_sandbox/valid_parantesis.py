@@ -6,7 +6,7 @@ def isValidParantesis(self, s: str) -> bool:
         if c in match: # if character in the dictionary
             open_stack.append(c) # we consider it's opening and add to the opening stack 
         else: # if not 
-            if not open_stack or match[open_stack.pop()] != c: # we check if the stack is empty or the last bracket in the stack matches the closing one
+            if not open_stack or maetch[open_stack.pop()] != c: # we check if the stack is empty or the last bracket in the stack matches the closing one
                 return False
                 
     return not open_stack # true if stack empty, means 

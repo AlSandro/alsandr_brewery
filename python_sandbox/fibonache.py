@@ -44,6 +44,39 @@ def fibonacci_iterate(n):
 print(Fibonacci_series(10))
 
 
+def sort_buble(arr):
+
+	for unsorted in range(len(arr)-1, 0, -1):
+		for i in range(unsorted):
+			if arr[i] > arr[i+1]:
+				arr[i], arr[i+1] = arr[i+1], arr[i]
+	return arr
+
+def sort_select(arr):
+	"""
+	make one large loop going through all the elements. each time it moves forward leaving already sorted elements from min
+	add minimum_index, which will chage when we run through second loop and insert the el with min value to the first loop [i]
+	add second (small) loop to iterate within the unsorted part
+	"""
+	for i in range(len(arr)):
+		min_ind = i
+		for j in range( i + 1, len(arr)): # not sorted range
+			if arr[j] < arr[min_ind]:
+				min_ind = j
+		arr[min_ind], arr[i] = arr[i], arr[min_ind]
+
+	return arr
+
+
+
+def mirror_a_list(arr):
+	middle = len(arr)//2
+	print(arr[:middle:-1], arr[:middle])
+	arr[:] = arr[:middle:-1] + arr[:middle]
+	return arr 
+
+print (mirror_a_list([10, 15, 4, 7, 19, 3, 10, 0, -2, 18, -20]))
+
 # print(Fibonacci(5))
 
 
