@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  app_test:
+    image: live_test:local
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/srv/test
+    depends_on:
+      - chrome
+      - firefox
+
+  firefox:
+    shm_size: 512m
+    image: selenium/standalone-firefox
+    volumes:
+      - ./spec/support/data/avatar.png:/srv/test/data/avatar.png
+
+  chrome:
+    shm_size: 512m
+    image: selenium/standalone-chrome
+    volumes:
+      - ./spec/support/data/avatar.png:/srv/test/data/avatar.png

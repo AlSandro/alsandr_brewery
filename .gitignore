@@ -102,3 +102,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+screenshot*png
+screenshot*html
+examples.txt
